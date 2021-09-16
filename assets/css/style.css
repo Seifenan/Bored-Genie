@@ -3,3 +3,44 @@
     --themeColor2: blue;
     --themeColor3: green;
   }
+
+
+
+<!--Navbar-->
+
+.navbar {
+  width:100%;
+  background-color: grey;
+  overflow: auto;
+  list-style-type: none;
+}
+
+.navbar a{
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.navbar a:hover {
+  background-color: blue;
+}
+
+
+.keyword-search {
+  float: right;
+  font-size: 20px;
+}
+
+ul.navbar-content li img{
+  width: 25px;
+}
+
+
+@media screen and (max-width:500px) {
+  .navbar {
+    float:none;
+    display:block;
+  }
+}
