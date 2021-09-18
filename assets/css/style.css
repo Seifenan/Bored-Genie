@@ -1,46 +1,39 @@
 :root {
-    --themeColor1: grey;
+    --themeColor1: #F6F6F6;
     --themeColor2: blue;
     --themeColor3: green;
   }
 
-
-
-<!--Navbar-->
-
-.navbar {
-  width:100%;
-  background-color: grey;
-  overflow: auto;
-  list-style-type: none;
-}
-
-.navbar a{
-  float: left;
-  padding: 12px;
-  color: black;
-  text-decoration: none;
-  font-size:20px;
-}
-
-.navbar a:hover {
-  background-color: blue;
-}
-
-
-.keyword-search {
-  float: right;
-  font-size: 20px;
-}
-
-ul.navbar-content li img{
-  width: 25px;
-}
-
-
-@media screen and (max-width:500px) {
-  .navbar {
-    float:none;
-    display:block;
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--themeColor1);
   }
-}
+
+  .genieContainer {
+    width: 50%;
+  }
+
+  .textContainer {
+    width: 40%;
+    padding: 5%;
+  }
+
+  @media screen and (max-width: 480px) {
+    .mainContainer {
+      display: inline-block;
+    }
+    
+    .genieContainer {
+      /* margin: 0 auto; */
+    }
+
+
+    .textContainer {
+      /* padding-left: 20%; */
+      /* align-items: center; */
+      margin: 0 auto;
+    }
+
+  }
+>>>>>>> a2cdd76ba4e130ed21b39fe42de4f009500842a4
