@@ -4,7 +4,7 @@
     --themeColor3: green;
   }
 
-  .mainContainer {
+  .homeContainer {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--themeColor1);
@@ -17,6 +17,23 @@
   .textContainer {
     width: 40%;
     padding: 5%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .mainContainer,
+  .bodyContainer,
+  .mindContainer {
+    
+  }
+
+  .body-icon,
+  .main-genie,
+  .mind-icon {
+    /* width: 30%; */
+
   }
 
   @media screen and (max-width: 480px) {

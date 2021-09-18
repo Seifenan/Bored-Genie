@@ -9,21 +9,67 @@
   <title>Document</title>
 </head>
 <body>  
-  <div class="mainContainer">
+  <div id="homeContainer" class="homeContainer">
     <div class="genieContainer">
-      <img src="./assets/images/hello.gif" class="home-genie" alt="home-genie">
+      <img src="./assets/images/hello.gif" class="home-genie" alt="home-page-genie">
     </div>
     <div class="textContainer">
       <p>I am here to make your boredom disappear!</p>
       <br>
       <P>We need to develop text or illustrations in this first page to explain what each of buttons mean or do!!</P>
       <br>
-      <button>Proceed / Continue</button>
+      <button id="start-btn">Proceed / Continue</button>
     </div>
+  </div>
+
+  <div id="mainContainer" class="hide mainContainer">
+    <div class="body-icon">
+      <img src="./assets/images/body 1.png" class="body" alt="main-page-body">
+      <p>Body</p>
+    </div>
+
+    <div class="main-genie">
+      <p>What’s your Mood?</p>
+      <img src="./assets/images/genie.png" class="main" alt="main-page-genie">
+    </div>
+
+    <div class="mind-icon">
+      <img src="./assets/images/mind 2.png" class="mind" alt="main-page-mind">
+      <p>mind</p>
+    </div>
+  </div>
+
+  <div id="mindContainer" class="mindContainer">
+
+
   </div>
 
   <footer>
     <!-- Nav Bar Here! -->
   </footer>
+
+  <!-- Add to JS file! -->
+  <script>
+
+    var startBtn = document.getElementById("start-btn");
+
+    var homeContainer = document.getElementById("homeContainer");
+
+    var mainContainer = document.getElementById("mainContainer");
+
+    startBtn.addEventListener("click", startApp);
+
+    function startApp() {
+      homeContainer.setAttribute("class", "hide")
+      mainContainer.setAttribute("class", "show")
+    }
+
+
+
+
+  </script>
+
+
+
 </body>
 </html>
