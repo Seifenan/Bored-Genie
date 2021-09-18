@@ -19,6 +19,27 @@
     padding: 5%;
   }
 
+
+  #nav-bar {
+    max-height: 100%;
+    background-color: #F6F6F6;
+    text-align: center;
+  }
+
+  #nav-home::before{
+    
+  }
+
+  #nav-recent{
+
+  }
+
+  #nav-key {
+
+  }
+
+
+
   @media screen and (max-width: 480px) {
     .mainContainer {
       display: inline-block;
@@ -36,4 +57,3 @@
     }
 
   }
->>>>>>> a2cdd76ba4e130ed21b39fe42de4f009500842a4
