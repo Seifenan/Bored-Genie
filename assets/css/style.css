@@ -24,20 +24,27 @@
     max-height: 100%;
     background-color: #F6F6F6;
     text-align: center;
+    border-top: black;
+    border-style: solid 1px;
   }
 
   #nav-home::before{
     
   }
 
-  #nav-recent{
+  #nav-recent:before{
 
   }
 
-  #nav-key {
+  #nav-key:before{
 
   }
 
+  .pure-g div {
+    box-sizing: border-box;
+  }
+
+  
 
 
   @media screen and (max-width: 480px) {
