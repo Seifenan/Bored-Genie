@@ -11,30 +11,6 @@
 </head>
 <body> 
   
-  <script>
-    let recentSearches = [];
-    
-    const addRecentSearch = (ev) => {
-      ev.preventDefault();  //stop form submitting
-      let search = {
-        recent: document.getElementByID('search').value,
-      }
-      recentSearches.push(search);
-      document.form[0].reset(); //clear form
-  
-      let pre = document.querySelector('#msg pre');
-      pre.textContent = '\n' + JSON.stringify(recentSearches, '\t',2);
-  
-      localStorage.setItem('MyRecentSearches',JSON.stringify(recentSearches));
-  
-      }
-      document.addEventListener('DOMContentLoaded', ()=> {
-        document.getElementById('search').addEventListener('click', addRecentSearch);
-      });
-  </script>
-
-
-
   <div class="mainContainer">
     <div class="genieContainer">
       <img src="./assets/images/hello.gif" class="home-genie" alt="home-genie">
