@@ -1,5 +1,38 @@
 :root {
-    --themeColor1: grey;
+    --themeColor1: #F6F6F6;
     --themeColor2: blue;
     --themeColor3: green;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--themeColor1);
+  }
+
+  .genieContainer {
+    width: 50%;
+  }
+
+  .textContainer {
+    width: 40%;
+    padding: 5%;
+  }
+
+  @media screen and (max-width: 480px) {
+    .mainContainer {
+      display: inline-block;
+    }
+    
+    .genieContainer {
+      /* margin: 0 auto; */
+    }
+
+
+    .textContainer {
+      /* padding-left: 20%; */
+      /* align-items: center; */
+      margin: 0 auto;
+    }
+
   }
