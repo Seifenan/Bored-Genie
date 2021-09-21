@@ -4,6 +4,14 @@
     --themeColor3: green;
   }
 
+  a,
+  footer {
+    font-weight: bold;
+    color: white;
+  }
+
+
+
   .mainContainer {
     display: flex;
     flex-wrap: wrap;
