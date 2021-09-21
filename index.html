@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous"> -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <title>Document</title>
 </head>
 <body>  
-  <div id="homeContainer" class="homeContainer">
+  <div class="homeContainer">
     <div class="genieContainer">
       <img src="./assets/images/hello.gif" class="home-genie" alt="home-page-genie">
     </div>
@@ -22,24 +22,24 @@
     </div>
   </div>
 
-  <div id="mainContainer" class="hide mainContainer">
+  <div class="mainContainer" id="hide">
     <div class="body-icon">
-      <img src="./assets/images/body 1.png" class="body" alt="main-page-body">
-      <p>Body</p>
+      <button class="bodyBtn"><img src="./assets/images/body 1.png" alt="main-page-body" width="100%">
+      <p>Body</p></button>
     </div>
 
     <div class="main-genie">
       <p>What’s your Mood?</p>
-      <img src="./assets/images/genie.png" class="main" alt="main-page-genie">
+      <img src="./assets/images/genie.png" alt="main-page-genie" width="100%">
     </div>
 
     <div class="mind-icon">
-      <img src="./assets/images/mind 2.png" class="mind" alt="main-page-mind">
-      <p>mind</p>
+      <button class="mindBtn"><img src="./assets/images/mind 2.png" alt="main-page-mind" width="100%">
+      <p>mind</p></button>
     </div>
   </div>
 
-  <div id="mindContainer" class="mindContainer">
+  <!-- <div id="mindContainer" class="mindContainer"> -->
 
 
   </div>
@@ -53,23 +53,19 @@
 
     var startBtn = document.getElementById("start-btn");
 
-    var homeContainer = document.getElementById("homeContainer");
+    var homeContainer = document.querySelector(".homeContainer");
 
-    var mainContainer = document.getElementById("mainContainer");
+    var mainContainer = document.querySelector(".mainContainer");
 
     startBtn.addEventListener("click", startApp);
 
     function startApp() {
-      homeContainer.setAttribute("class", "hide")
-      mainContainer.setAttribute("class", "show")
+      homeContainer.setAttribute("id", "hide")
+      mainContainer.setAttribute("id", "show")
     }
 
-
-
-
   </script>
-
-
+  <!--End; Add to JS file! -->
 
 </body>
 </html>
