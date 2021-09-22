@@ -4,6 +4,7 @@
     --btnHover: #C4C4C4;
   }
 
+
 .homeContainer,
 .mainContainer {
   display: flex;
@@ -23,6 +24,21 @@
 #hide {
   display: none; 
 }
+=======
+  a,
+  footer {
+    font-weight: bold;
+    color: white;
+  }
+
+
+
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--themeColor1);
+  }
+
 
 
 .body-icon,
@@ -83,6 +99,32 @@ button:hover {
   color: black;
 
 }
+
+
+
+  #nav-bar {
+    max-height: 100%;
+    background-color: #606060;
+    text-align: center;
+    border: black;
+    border-style: solid 1px;
+    
+  }
+
+  .pure-g div {
+    box-sizing: border-box;
+    padding-top: 5px;
+    ;
+  }
+
+  
+
+  div.vertical-line {
+    width: 1px;
+    background-color: white;
+    height: 80%;
+    float: left;
+  }
 
 
   @media screen and (max-width: 480px) {
