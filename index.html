@@ -4,24 +4,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous"> -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <title>Document</title>
   <script src="https://kit.fontawesome.com/d0b784a2d0.js" crossorigin="anonymous"></script>
 </head>
+
+<body>  
+  <div class="homeContainer">
+=======
 <body> 
   
   <div class="mainContainer">
+
     <div class="genieContainer">
-      <img src="./assets/images/hello.gif" class="home-genie" alt="home-genie">
+      <img src="./assets/images/hello.gif" class="home-genie" alt="home-page-genie">
     </div>
     <div class="textContainer">
       <p>I am here to make your boredom disappear!</p>
       <br>
       <P>We need to develop text or illustrations in this first page to explain what each of buttons mean or do!!</P>
       <br>
-      <button>Proceed / Continue</button>
+      <button id="start-btn">Proceed / Continue</button>
     </div>
+  </div>
+
+  <div class="mainContainer" id="hide">
+    <div class="body-icon">
+      <button class="bodyBtn"><img src="./assets/images/body 1.png" alt="main-page-body" width="100%">
+      <p>Body</p></button>
+    </div>
+
+    <div class="main-genie">
+      <p>What’s your Mood?</p>
+      <img src="./assets/images/genie.png" alt="main-page-genie" width="100%">
+    </div>
+
+    <div class="mind-icon">
+      <button class="mindBtn"><img src="./assets/images/mind 2.png" alt="main-page-mind" width="100%">
+      <p>mind</p></button>
+    </div>
+  </div>
+
+  <!-- <div id="mindContainer" class="mindContainer"> -->
+
+
   </div>
 
   <footer>
@@ -54,6 +81,26 @@
     </div>
 
   </footer>
+
+  <!-- Add to JS file! -->
+  <script>
+
+    var startBtn = document.getElementById("start-btn");
+
+    var homeContainer = document.querySelector(".homeContainer");
+
+    var mainContainer = document.querySelector(".mainContainer");
+
+    startBtn.addEventListener("click", startApp);
+
+    function startApp() {
+      homeContainer.setAttribute("id", "hide")
+      mainContainer.setAttribute("id", "show")
+    }
+
+  </script>
+  <!--End; Add to JS file! -->
+
 </body>
 </html>
 

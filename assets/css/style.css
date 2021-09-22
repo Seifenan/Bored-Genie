@@ -1,9 +1,30 @@
 :root {
     --themeColor1: #F6F6F6;
-    --themeColor2: blue;
-    --themeColor3: green;
+    --themeColor2: #606060;
+    --btnHover: #C4C4C4;
   }
 
+
+.homeContainer,
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--themeColor1);
+}
+
+.genieContainer {
+  width: 50%;
+}
+
+.textContainer {
+  width: 40%;
+  padding: 5%;
+}
+
+#hide {
+  display: none; 
+}
+=======
   a,
   footer {
     font-weight: bold;
@@ -18,14 +39,67 @@
     background-color: var(--themeColor1);
   }
 
-  .genieContainer {
-    width: 50%;
-  }
 
-  .textContainer {
-    width: 40%;
+
+.body-icon,
+.main-genie,
+.mind-icon {
+  padding: 5%;
+  text-align: center;
+
+}
+
+
+.body-icon {
+  width: 10%;
+}
+.main-genie {
+  width: 25%;
+}
+.mind-icon {
+  width: 15%;
+}
+
+  /* .bodyBtn {
     padding: 5%;
-  }
+    margin: 5%;
+  } */
+
+  /* .body-icon:hover,
+  .main-genie:hover,
+  .mind-icon:hover {
+    transition: all .3s ease-in-out;
+
+
+  } */
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+  
+  color: black;
+  
+}
+
+button:hover {
+  background-color: var(--btnHover);
+  color: black;
+
+}
+
+#start-btn {
+  background-color: var(--themeColor2);
+  color: white;
+}
+
+#start-btn:hover {
+  background-color: var(--btnHover);
+  color: black;
+
+}
+
 
 
   #nav-bar {
