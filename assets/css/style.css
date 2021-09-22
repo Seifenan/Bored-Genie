@@ -110,24 +110,6 @@ button:hover {
   
 }
 
-.pure-g div {
-  display: flex;
-  flex-direction: row;
-  
-
-  box-sizing: border-box;
-  padding-top: 5px;
-  
-}
-
-div.vertical-line {
-  width: 1px;
-  background-color: white;
-  height: 80%;
-  float: left;
-}
-/* Amina's CSS COde End */
-
 
 
 @media screen and (max-width: 480px) {
@@ -135,9 +117,9 @@ div.vertical-line {
     display: inline-block;
   }
   
-  .genieContainer {
-    /* margin: 0 auto; */
-  }
+  /* .genieContainer {
+    margin: 0 auto;
+  } */
 
   .textContainer {
     /* padding-left: 20%; */
@@ -154,3 +136,26 @@ div.vertical-line {
 
 
 
+/* Amina's CSS Code */
+
+#nav-bar {
+  max-height: 100%;
+  background-color: #606060;
+  text-align: center;
+  border: black;
+  border-style: solid 1px;
+  
+}
+
+.pure-g div {
+  box-sizing: border-box;
+  padding-top: 5px;
+  ;
+}
+
+div.vertical-line {
+  width: 1px;
+  background-color: white;
+  height: 80%;
+  float: left;
+}
