@@ -1,8 +1,8 @@
 :root {
-    --themeColor1: #F6F6F6;
-    --themeColor2: #606060;
-    --btnHover: #C4C4C4;
-  }
+  --themeColor1: #F6F6F6;
+  --themeColor2: #606060;
+  --btnHover: #C4C4C4;
+}
 
 
 .homeContainer,
@@ -24,20 +24,20 @@
 #hide {
   display: none; 
 }
-=======
-  a,
-  footer {
-    font-weight: bold;
-    color: white;
-  }
+
+a,
+footer {
+  font-weight: bold;
+  color: white;
+}
 
 
 
-  .mainContainer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--themeColor1);
-  }
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--themeColor1);
+}
 
 
 
