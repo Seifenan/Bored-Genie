@@ -12,38 +12,74 @@
 
 <body> 
   
-  <div class="homeContainer" id="">
+  <div class="homeContainer">
 
     <div class="genieContainer">
-      <img src="./assets/images/hello.gif" class="home-genie" alt="home-page-genie">
+      <img src="./assets/images/helloGenie.gif" class="homeGenie" alt="home-page-genie">
     </div>
     <div class="textContainer">
       <p>I am here to make your boredom disappear!</p>
       <br>
       <P>We need to develop text or illustrations in this first page to explain what each of buttons mean or do!!</P>
       <br>
-      <button id="start-btn">Proceed / Continue</button>
+      <button id="startBtn">Proceed / Continue</button>
     </div>
   </div>
 
   <div class="mainContainer" id="hide">
-    <div class="body-icon">
-      <button class="bodyBtn"><img src="./assets/images/body 1.png" alt="main-page-body" width="100%">
+    <div class="bodyIcon">
+      <button class="bodyBtn"><img src="./assets/images/body 1.png" alt="main-page-body-icon" width="100%">
       <p>Body</p></button>
     </div>
 
-    <div class="main-genie">
+    <div class="mainGenie">
       <p>What’s your Mood?</p>
-      <img src="./assets/images/genie.png" alt="main-page-genie" width="100%">
+      <img src="./assets/images/genie.png" alt="main-page-genie-icon" width="100%">
     </div>
 
-    <div class="mind-icon">
-      <button class="mindBtn"><img src="./assets/images/mind 2.png" alt="main-page-mind" width="100%">
+    <div class="mindIcon">
+      <button class="mindBtn"><img src="./assets/images/mind 2.png" alt="main-page-mind-icon" width="100%">
       <p>mind</p></button>
     </div>
   </div>
 
-  <!-- <div id="mindContainer" class="mindContainer"> -->
+  <!--Testing Loading Genie-->
+
+  <div class="loadingGenie" id="hide">
+    <img src="./assets/images/loadingGenie.gif" alt="loading-genie-icon" width="40%">
+  </div>
+
+  <div class="loadingGenie2" id="hide">
+    <img src="./assets/images/loadingGenie2.gif" alt="loading-genie-icon" width="40%">
+  </div>
+
+  <!-- <div class="bodyContainer"> -->
+
+  <!-- <div class="bodyContainer" id="hide">
+    <div class="fitnessIcon">
+      <button class="fitnessGenie"><img src="./assets/images/fitnessGenie.gif" alt="body-page-fitness-genie" width="170%">
+      <p>Fitness (Coming Soon!)</p></button>
+    </div>
+
+    <div class="foodIcon">
+      <button class="foodGinie"><img src="./assets/images/foodGinie.gif" alt="body-page-food-genie" width="120%">
+      <p>Food</p></button>
+    </div>
+  </div> -->
+
+  <!-- <div id="mindContainer"> -->
+
+  <!-- <div class="mindContainer" id="hide">
+    <div class="musicIcon">
+      <button class="musicGenie"><img src="./assets/images/musicGenie.gif" alt="mind-page-music-genie" width="140%">
+      <p>Music</p></button>
+    </div>
+
+    <div class="triviaIcon">
+      <button class="triviaGinie"><img src="./assets/images/triviaGinie.gif" alt="mind-page-trivia-genie" width="75%">
+      <p>Trivia</p></button>
+    </div>
+  </div> -->
 
 
 
@@ -67,7 +103,7 @@
         <div class="vertical-line"></div>
         <form class="pure-form">
           <label for="keyword-search">
-            <i class="fas fa-search"></i><input type="search" id="search" placeholder="Keyword Search"/>
+            <i class="fas fa-search"></i><!-- <input type="search" id="search" placeholder="Keyword Search"/> -->
           </label>
         </form>
       </div>
@@ -75,25 +111,7 @@
 
   </footer>
 
-  <!--Start; Add to JS file! -->
-  <script>
-
-    var startBtn = document.getElementById("start-btn");
-
-    var homeContainer = document.querySelector(".homeContainer");
-
-    var mainContainer = document.querySelector(".mainContainer");
-
-    startBtn.addEventListener("click", startApp);
-
-    function startApp() {
-      homeContainer.setAttribute("id", "hide")
-      mainContainer.setAttribute("id", "show")
-    }
-
-  </script>
-  <!--End; Add to JS file! -->
-
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
 
