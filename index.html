@@ -7,24 +7,93 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/d0b784a2d0.js" crossorigin="anonymous"></script>
 </head>
-<body>  
-  <div class="mainContainer">
+
+<body> 
+  
+  <div class="homeContainer" id="">
+
     <div class="genieContainer">
-      <img src="./assets/images/hello.gif" class="home-genie" alt="home-genie">
+      <img src="./assets/images/hello.gif" class="home-genie" alt="home-page-genie">
     </div>
     <div class="textContainer">
       <p>I am here to make your boredom disappear!</p>
       <br>
       <P>We need to develop text or illustrations in this first page to explain what each of buttons mean or do!!</P>
       <br>
-      <a href="assets/searchOutput.html">Proceed / Continue</a>
+      <button id="start-btn">Proceed / Continue</button>
     </div>
   </div>
 
+  <div class="mainContainer" id="hide">
+    <div class="body-icon">
+      <button class="bodyBtn"><img src="./assets/images/body 1.png" alt="main-page-body" width="100%">
+      <p>Body</p></button>
+    </div>
+
+    <div class="main-genie">
+      <p>What’s your Mood?</p>
+      <img src="./assets/images/genie.png" alt="main-page-genie" width="100%">
+    </div>
+
+    <div class="mind-icon">
+      <button class="mindBtn"><img src="./assets/images/mind 2.png" alt="main-page-mind" width="100%">
+      <p>mind</p></button>
+    </div>
+  </div>
+
+  <!-- <div id="mindContainer" class="mindContainer"> -->
+
+
+
   <footer>
-    <!-- Nav Bar Here! -->
+    <div class="pure-g" id="nav-bar">
+      <div class="pure-u-1-3" id="nav-home">
+        <i class="fas fa-home"></i>
+        <a href="./index.html">Home</a>
+      </div>
+
+      <div class="pure-u-1-3" id="nav-recent">
+        <div class="vertical-line"></div>
+        <i class="fas fa-history"></i>
+
+          <!-- Make a new sheet for recent searches -->
+
+        <a href="./assets/recentSearches.html">Recent</a>
+      </div>
+
+      <div class="pure-u-1-3" id="nav-search">
+        <div class="vertical-line"></div>
+        <form class="pure-form">
+          <label for="keyword-search">
+            <i class="fas fa-search"></i><input type="search" id="search" placeholder="Keyword Search"/>
+          </label>
+        </form>
+      </div>
+    </div>
+
   </footer>
-  <script src="assets/javascript/searchOutput.js"></script>
+
+  <!--Start; Add to JS file! -->
+  <script>
+
+    var startBtn = document.getElementById("start-btn");
+
+    var homeContainer = document.querySelector(".homeContainer");
+
+    var mainContainer = document.querySelector(".mainContainer");
+
+    startBtn.addEventListener("click", startApp);
+
+    function startApp() {
+      homeContainer.setAttribute("id", "hide")
+      mainContainer.setAttribute("id", "show")
+    }
+
+  </script>
+  <!--End; Add to JS file! -->
+
 </body>
 </html>
+
