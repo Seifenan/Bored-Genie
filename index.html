@@ -15,7 +15,7 @@
   <div class="homeContainer">
 
     <div class="genieContainer">
-      <img src="./assets/images/hello.gif" class="homeGenie" alt="home-page-genie">
+      <img src="./assets/images/helloGenie.gif" class="homeGenie" alt="home-page-genie">
     </div>
     <div class="textContainer">
       <p>I am here to make your boredom disappear!</p>
@@ -55,35 +55,31 @@
 
   <!-- <div class="bodyContainer"> -->
 
-  <div class="bodyContainer" id="hide">
+  <!-- <div class="bodyContainer" id="hide">
     <div class="fitnessIcon">
-      <button class="fitnessGenie"><img src="./assets/images/fitnessGenie.gif" alt="body-page-fitness-genie" width="110%">
-      <p>Fitness</p></button>
+      <button class="fitnessGenie"><img src="./assets/images/fitnessGenie.gif" alt="body-page-fitness-genie" width="170%">
+      <p>Fitness (Coming Soon!)</p></button>
     </div>
 
     <div class="foodIcon">
       <button class="foodGinie"><img src="./assets/images/foodGinie.gif" alt="body-page-food-genie" width="120%">
       <p>Food</p></button>
     </div>
-  </div>
+  </div> -->
 
   <!-- <div id="mindContainer"> -->
 
-  <div class="mindContainer" id="hide">
+  <!-- <div class="mindContainer" id="hide">
     <div class="musicIcon">
-      <button class="musicGenie"><img src="./assets/images/musicGenie.gif" alt="mind-page-music-genie" width="130%">
+      <button class="musicGenie"><img src="./assets/images/musicGenie.gif" alt="mind-page-music-genie" width="140%">
       <p>Music</p></button>
     </div>
 
     <div class="triviaIcon">
-      <button class="triviaGinie"><img src="./assets/images/triviaGinie.gif" alt="mind-page-trivia-genie" width="55%">
+      <button class="triviaGinie"><img src="./assets/images/triviaGinie.gif" alt="mind-page-trivia-genie" width="75%">
       <p>Trivia</p></button>
     </div>
-  </div>
-
-
-
-
+  </div> -->
 
 
 
@@ -115,86 +111,7 @@
 
   </footer>
 
-  <!--Start; Add to JS file! -->
-  <script>
-
-    // Start; Navigation to Main Page (choose body or mind)
-    var startBtn = document.getElementById("startBtn");
-
-    var homeContainer = document.querySelector(".homeContainer");
-
-    var mainContainer = document.querySelector(".mainContainer");
-
-    startBtn.addEventListener("click", startApp);
-
-    function startApp() {
-      homeContainer.setAttribute("id", "hide");
-      mainContainer.setAttribute("id", "show");
-    }
-    // End; Navigation to Main Page
-
-    // Start; Navigation to Body Page 
-    var bodyIcon = document.querySelector(".bodyIcon");
-
-    var mindIcon = document.querySelector(".mindIcon");
-
-    var mainContainer = document.querySelector(".mainContainer");
-
-    var bodyContainer = document.querySelector(".bodyContainer");
-
-    var mindContainer = document.querySelector(".mindContainer");
-
-
-
-    bodyIcon.addEventListener("click", loadBody);
-
-    mindIcon.addEventListener("click", loadMind);
-
-
-    function loadBody() {
-      loadGenie();
-
-      mainContainer.setAttribute("id", "hide");
-      bodyContainer.setAttribute("id", "show");
-    }
-
-    function loadMind() {
-      loadGenie();
-
-      mainContainer.setAttribute("id", "hide");
-      mindContainer.setAttribute("id", "show");
-    }
-    // End; Navigation to Body Page
-
-    // Start; Testing Loading Genie
-
-    var loadingGenie = document.querySelector(".loadingGenie");
-
-    var loadingGenie2 = document.querySelector(".loadingGenie2");
-
-
-    function loadGenie() {
-      loadingGenie.setAttribute("id", "show");
-      setTimeout(function() { loadingGenie.setAttribute("id", "hide"); }, 1400);
-      setTimeout(function() { loadingGenie2.setAttribute("id", "show"); }, 1400);
-      setTimeout(function() { loadingGenie2.setAttribute("id", "hide"); }, 2500);
-
-    }
-
-
-    
-
-
-
-
-
-
-
-
-
-  </script>
-  <!--End; Add to JS file! -->
-
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
 

@@ -11,6 +11,72 @@ footer {
   text-decoration: none;
 }
 
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+  
+  color: black;
+}
+
+button:hover {
+  background-color: var(--btnHover);
+  color: black;
+}
+
+#startBtn {
+  background-color: var(--themeColor2);
+  color: white;
+}
+
+#startBtn:hover {
+  background-color: var(--btnHover);
+  color: black;
+}
+
+#hide {
+  display: none; 
+}
+
+.homeContainer,
+.mainContainer,
+.bodyContainer,
+.mindContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--themeColor1);
+  /* justify-items: center; */
+}
+
+.genieContainer {
+  width: 35%;
+  margin-left: 7%;
+}
+
+.textContainer {
+  width: 40%;
+  padding: 5%;
+}
+
+.bodyIcon,
+.mainGenie,
+.mindIcon {
+  padding: 5%;
+  text-align: center;
+  /* justify-items: center; */
+}
+
+.bodyIcon {
+  width: 10%;
+}
+.mainGenie {
+  width: 25%;
+}
+.mindIcon {
+  width: 15%;
+}
 
 .loadingGenie,
 .loadingGenie2 {
@@ -33,94 +99,6 @@ footer {
 
 
 
-.homeContainer,
-.mainContainer,
-.bodyContainer,
-.mindContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--themeColor1);
-  /* justify-items: center; */
-
-}
-
-.genieContainer {
-  width: 35%;
-  margin-left: 7%;
-}
-
-.textContainer {
-  width: 40%;
-  padding: 5%;
-}
-
-#hide {
-  display: none; 
-}
-
-
-
-.bodyIcon,
-.mainGenie,
-.mindIcon {
-  padding: 5%;
-  text-align: center;
-  /* justify-items: center; */
-}
-
-
-.bodyIcon {
-  width: 10%;
-}
-.mainGenie {
-  width: 25%;
-}
-.mindIcon {
-  width: 15%;
-}
-
-
-/* .bodyBtn {
-  padding: 5%;
-  margin: 5%;
-} */
-
-/* .bodyIcon:hover,
-.mainGenie:hover,
-.mind-icon:hover {
-  transition: all .3s ease-in-out;
-
-
-} */
-
-
-button {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  padding: 1.5%;
-  border: none;
-  border-radius: 5px;
-  
-  color: black;
-  
-}
-
-button:hover {
-  background-color: var(--btnHover);
-  color: black;
-
-}
-
-#startBtn {
-  background-color: var(--themeColor2);
-  color: white;
-}
-
-#startBtn:hover {
-  background-color: var(--btnHover);
-  color: black;
-
-}
 
 
 
