@@ -86,13 +86,27 @@ button:hover {
   text-align: center;
 }
 
-.fitnessIcon,
-.foodIcon,
-.musicIcon,
-.triviaIcon {
-  width: 50%;
-  text-align: center;
-  background-color: var(--themeColor1);
+/* .bodyBtn {
+  padding: 5%;
+  margin: 5%;
+} */
+
+/* .body-icon:hover,
+.main-genie:hover,
+.mind-icon:hover {
+  transition: all .3s ease-in-out;
+} */
+
+
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+  
+  color: black;
+ 
 }
 
 
@@ -100,7 +114,16 @@ button:hover {
 
 
 
+/* Amina's CSS Code */
 
+#nav-bar {
+  max-height: 100%;
+  background-color: #606060;
+  text-align: center;
+  border: black;
+  border-style: solid 1px;
+  
+}
 
 
 
@@ -144,3 +167,22 @@ div.vertical-line {
   height: 80%;
   float: left;
 }
+
+.pure-u-1-2 {
+  height: 65px;
+  font-size: x-large;
+  padding: .5em;
+}
+ 
+#recentS { 
+  text-align: center;
+  background-color:#C4C4C4;
+  
+}
+ 
+.recentHeader,
+.recentP,
+.pure-button-nav {
+  text-align: center;
+}
+
