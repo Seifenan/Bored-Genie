@@ -1,9 +1,9 @@
-//I will try to pass this through if needed in the query param
-var searchParam = "";
-//https://theaudiodb.com/api/v1/json/1/discography.php?s=coldplay
-//'https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay'
-//use giphy for image
-//https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyBVZVUd-QRbIypXWwCXNxqj3VkHiJKKhqg&part=snippet,contentDetails,statistics,status
+//Declaring search variables here to work with event listener below
+var musicClick = $("#musicClick");
+var mindClick = $("#mindClick");
+var restartClick = $("#restartClick");
+const container1 = $(".container1");
+
 
 //This function will give us the artist name. 
 function getArtistName() {
@@ -42,14 +42,6 @@ function displayArtistData(artistSearchParam) {
       return response.json();
     })
     .then(function (data) {
-      /*
-      console.log(data.artists[0].strArtist);
-      console.log(data.artists[0].strGenre);
-      console.log(data.artists[0].strBiographyEN);
-      console.log(data.artists[0].strWebsite);
-      console.log(data.artists[0].strFacebook);
-      console.log(data.artists[0].strTwitter);*/
-
 
       //Here we get the data back and store it.
       var artistName = data.artists[0].strArtist;
@@ -90,6 +82,25 @@ function displayArtistData(artistSearchParam) {
 
     });
 }
+
+//This will display a restart click
+function displayRestartGiphy() {
+  var restartGiphyURL = "https://api.giphy.com/v1/gifs/search?q=restart&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1";
+  fetch(restartGiphyURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (response) {
+      console.log(response.data[0]);
+
+      restartClick.html("");
+
+      var restartClickEl = document.createElement('img');
+      restartClickEl.setAttribute('src', response.data[0].images.fixed_height.url);
+
+      restartClick.append(restartClickEl);
+    });
+}
 //On function to call with out event listener that we will be implementing. 
 function displayArtist() {
   var artistSearchParam = getArtistName();
@@ -97,39 +108,24 @@ function displayArtist() {
   displayArtistData(artistSearchParam);
 }
 
-displayArtist();
+//This will run the JS for music options.
+musicClick.click(function () {
+  displayArtist();
+  displayRestartGiphy();
+})
 
-/*fetch(
-    'https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay'
-  )
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data);
-    });
-  */
+mindClick.click(function () {
+  container1.html("");
 
+  var downForMaintenence = document.createElement('img');
+  downForMaintenence.setAttribute('src', "../assets/images/Down-for-Maintenance.jpg");
+  downForMaintenence.setAttribute('width', "300");
+  downForMaintenence.setAttribute('height', "300");
+  container1.append(downForMaintenence);
 
-//Google maps pins
+  displayRestartGiphy();
+})
 
-    var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    };
-
-    function success(pos) {
-      var crd = pos.coords;
-
-      console.log('Your current position is:');
-      console.log(`Latitude : ${crd.latitude}`);
-      console.log(`Longitude: ${crd.longitude}`);
-      console.log(`More or less ${crd.accuracy} meters.`);
-    }
-
-    function error(err) {
-      console.warn(`ERROR(${err.code}): ${err.message}`);
-    }
-
-    navigator.geolocation.getCurrentPosition(success, error, options);
+restartClick.click(function () {
+  window.location.reload();
+})
