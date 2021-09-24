@@ -150,6 +150,14 @@ div.vertical-line {
   padding: .5em;
 }
 
+#recentS { 
+  text-align: center;
+  background-color:#C4C4C4;
+  
+}
+
+.recentHeader,
+.recentP,
 .pure-button-nav {
-  color: #606060;
+  text-align: center;
 }
