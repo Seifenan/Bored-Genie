@@ -149,3 +149,7 @@ div.vertical-line {
   font-size: x-large;
   padding: .5em;
 }
+
+.pure-button-nav {
+  color: #606060;
+}
