@@ -2,7 +2,6 @@
 var musicClick = $("#musicClick");
 var mindClick = $("#mindClick");
 var restartClick = $("#restartClick");
-const submit = $("#submit");
 const container1 = $(".container1");
 const container2 = $(".container2");
 
@@ -79,7 +78,6 @@ function displayArtistData(artistSearchParam) {
       container2SubDiv1.append(artistWebsiteEl);
       container2SubDiv1.append(artistFacebookEl);
       container2SubDiv1.append(artistTwitterEl);
-
     });
 }
 
@@ -96,7 +94,6 @@ function displayTriviaOptions() {
     + "<option value=10>Entertainment: Books</option>"
     + "<option value=11>Entertainment: Film</option>"
     + "<option value=12>Entertainment: Music</option>"
-    + "<option value=13>Entertainment: Musicals &amp; Theatres</option>"
     + "<option value=14>Entertainment: Television</option>"
     + "<option value=15>Entertainment: Video Games</option>"
     + "<option value=16>Entertainment: Board Games</option>"
@@ -127,34 +124,60 @@ function displayTriviaOptions() {
     + "<option value=hard>Hard</option>"
     + "</select>");
 
-  container2.append("<input id=submit type=submit value=Submit>");
+  container2.append("<input id='submit' type='button'>Submit</input>");
+
+  //Upon clicking submit we make the API call.
+  var submit = $("#submit");
+  submit.click(function () {
+
+    category = document.getElementById('selectCategory').value;
+    difficulty = document.getElementById('selectDifficulty').value;
+    var triviaURL = "https://opentdb.com/api.php?amount=1&category=" + category + "&difficulty=" + difficulty + "&type=boolean";
+
+    fetch(triviaURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        displayGiphy(category);
+
+        var triviaCategory = data.results[0].category;
+        var triviaDifficulty = data.results[0].difficulty;
+        var triviaQuestion = data.results[0].question;
+        var triviaAnswer = data.results[0].correct_answer;
+
+        container2.html("");
+
+        var triviaCategoryEl = document.createElement("p");
+        var triviaDifficultyEl = document.createElement("p");
+        var triviaQuestionEl = document.createElement("p");
+
+        //Here we are adding data to our DOM elements.
+        triviaCategoryEl.textContent = "Category: " + triviaCategory;
+        triviaDifficultyEl.textContent = "Difficulty: " + triviaDifficulty.toUpperCase();
+        triviaQuestionEl.textContent = "True or False? " + triviaQuestion;
+
+
+        container2.append(triviaCategoryEl);
+        container2.append(triviaDifficultyEl);
+        container2.append(triviaQuestionEl);
+
+
+        container2.append("<span title=" + triviaAnswer + ">Hover your mouse to see answer!</span>")
+
+        /*var toPutIntoLocalStorage = JSON.stringify({
+          trivia: value1,
+          difficulty: value2
+        });
+
+        var toPullOutOfLocalStorage = JSON.parse(value);
+        toPullOutOfLocalStorage.trivia;
+        toPullOutOfLocalStorage.difficulty;*/
+
+      });
+  })
 }
-//Upon clicking submit we make the API call.
-submit.click(function () {
-
-  category = document.getElementById('selectCategory').value;
-  difficulty = document.getElementById('selectDifficulty').value;
-  var triviaURL = "https://opentdb.com/api.php?amount=1&category=" + category + "&difficulty=" + difficulty + "&type=boolean";
-
-  fetch(triviaURL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      displayGiphy(category);
-
-      /*var container2SubDiv1 = $(".container2SubDiv1");
-      container2SubDiv1.html("");
-
-
-      var triviaCategory = data.results[0].category;
-      var triviaDifficulty = data.results[0].difficulty;
-      var triviaQuestion = data.results[0].question;
-      var triviaAnswer = data.results[0].correct_answer;
-*/
-    });
-})
 
 //This will display a restart click
 function displayRestartGiphy() {
@@ -178,11 +201,6 @@ function displayArtist() {
   var artistSearchParam = getArtistName();
   displayGiphy(artistSearchParam);
   displayArtistData(artistSearchParam);
-}
-
-function displayTrivia() {
-  //displayGiphy("Sports");
-
 }
 
 //This will run the JS for music options.
