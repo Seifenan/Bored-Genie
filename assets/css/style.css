@@ -8,68 +8,8 @@ a,
 footer {
   font-weight: bold;
   color: white;
+  text-decoration: none;
 }
-
-
-
-
-
-.homeContainer,
-.mainContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--themeColor1);
-}
-
-.genieContainer {
-  width: 50%;
-}
-
-.textContainer {
-  width: 40%;
-  padding: 5%;
-}
-
-#hide {
-  display: none; 
-}
-
-.mainContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--themeColor1);
-}
-
-.body-icon,
-.main-genie,
-.mind-icon {
-  padding: 5%;
-  text-align: center;
-}
-
-
-.body-icon {
-  width: 10%;
-}
-.main-genie {
-  width: 25%;
-}
-.mind-icon {
-  width: 15%;
-}
-
-
-/* .bodyBtn {
-  padding: 5%;
-  margin: 5%;
-} */
-
-/* .body-icon:hover,
-.main-genie:hover,
-.mind-icon:hover {
-  transition: all .3s ease-in-out;
-} */
-
 
 button {
   font-family: 'Times New Roman', Times, serif;
@@ -79,52 +19,98 @@ button {
   border-radius: 5px;
   
   color: black;
- 
 }
 
 button:hover {
   background-color: var(--btnHover);
   color: black;
-
 }
 
-#start-btn {
+#startBtn {
   background-color: var(--themeColor2);
   color: white;
 }
 
-#start-btn:hover {
+#startBtn:hover {
   background-color: var(--btnHover);
   color: black;
-
 }
 
-/* Amina's CSS Code */
+#hide {
+  display: none; 
+}
 
-#nav-bar {
-  max-height: 100%;
-  background-color: #606060;
+.homeContainer,
+.mainContainer,
+.bodyContainer,
+.mindContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--themeColor1);
+  /* justify-items: center; */
+}
+
+.genieContainer {
+  width: 35%;
+  margin-left: 7%;
+}
+
+.textContainer {
+  width: 40%;
+  padding: 5%;
+}
+
+.bodyIcon,
+.mainGenie,
+.mindIcon {
+  padding: 5%;
   text-align: center;
-  border: black;
-  border-style: solid 1px;
-  
+  /* justify-items: center; */
 }
+
+.bodyIcon {
+  width: 10%;
+}
+.mainGenie {
+  width: 25%;
+}
+.mindIcon {
+  width: 15%;
+}
+
+.loadingGenie,
+.loadingGenie2 {
+  position: absolute;
+  background-color: var(--themeColor1);
+  width: 100%;
+  text-align: center;
+}
+
+.fitnessIcon,
+.foodIcon,
+.musicIcon,
+.triviaIcon {
+  width: 50%;
+  text-align: center;
+  background-color: var(--themeColor1);
+}
+
+
+
+
+
+
+
 
 
 
 @media screen and (max-width: 480px) {
-  .mainContainer {
+  .homeContainer {
     display: inline-block;
   }
   
-  /* .genieContainer {
-    margin: 0 auto;
-  } */
-
   .textContainer {
-    /* padding-left: 20%; */
-    /* align-items: center; */
-    margin: 0 auto;
+      margin: 0 auto;
   }
 }
 
@@ -150,7 +136,6 @@ button:hover {
 .pure-g div {
   box-sizing: border-box;
   padding-top: 5px;
-  ;
 }
 
 div.vertical-line {
