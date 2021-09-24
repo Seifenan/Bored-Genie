@@ -150,9 +150,9 @@ function displayTriviaOptions() {
         var triviaQuestionEl = document.createElement("p");
 
         //Here we are adding data to our DOM elements.
-        triviaCategoryEl.textContent = "Category: " + triviaCategory;
-        triviaDifficultyEl.textContent = "Difficulty: " + triviaDifficulty.toUpperCase();
-        triviaQuestionEl.textContent = "True or False? " + triviaQuestion;
+        $(triviaCategoryEl).html("Category: " + triviaCategory);
+        $(triviaDifficultyEl).html("Difficulty: " + triviaDifficulty.toUpperCase());
+        $(triviaQuestionEl).html("True or False? " + triviaQuestion);
 
         container2.append(triviaCategoryEl);
         container2.append(triviaDifficultyEl);
