@@ -167,3 +167,22 @@ div.vertical-line {
   height: 80%;
   float: left;
 }
+
+.pure-u-1-2 {
+  height: 65px;
+  font-size: x-large;
+  padding: .5em;
+}
+ 
+#recentS { 
+  text-align: center;
+  background-color:#C4C4C4;
+  
+}
+ 
+.recentHeader,
+.recentP,
+.pure-button-nav {
+  text-align: center;
+}
+
