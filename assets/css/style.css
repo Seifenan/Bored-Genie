@@ -8,21 +8,51 @@ a,
 footer {
   font-weight: bold;
   color: white;
+  text-decoration: none;
 }
 
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+  
+  color: black;
+}
 
+button:hover {
+  background-color: var(--btnHover);
+  color: black;
+}
 
+#startBtn {
+  background-color: var(--themeColor2);
+  color: white;
+}
 
+#startBtn:hover {
+  background-color: var(--btnHover);
+  color: black;
+}
+
+#hide {
+  display: none; 
+}
 
 .homeContainer,
-.mainContainer {
+.mainContainer,
+.bodyContainer,
+.mindContainer {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--themeColor1);
+  /* justify-items: center; */
 }
 
 .genieContainer {
-  width: 50%;
+  width: 35%;
+  margin-left: 7%;
 }
 
 .textContainer {
@@ -30,34 +60,31 @@ footer {
   padding: 5%;
 }
 
-#hide {
-  display: none; 
-}
-
-.mainContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--themeColor1);
-}
-
-.body-icon,
-.main-genie,
-.mind-icon {
+.bodyIcon,
+.mainGenie,
+.mindIcon {
   padding: 5%;
   text-align: center;
+  /* justify-items: center; */
 }
 
-
-.body-icon {
+.bodyIcon {
   width: 10%;
 }
-.main-genie {
+.mainGenie {
   width: 25%;
 }
-.mind-icon {
+.mindIcon {
   width: 15%;
 }
 
+.loadingGenie,
+.loadingGenie2 {
+  position: absolute;
+  background-color: var(--themeColor1);
+  width: 100%;
+  text-align: center;
+}
 
 /* .bodyBtn {
   padding: 5%;
@@ -82,22 +109,10 @@ button {
  
 }
 
-button:hover {
-  background-color: var(--btnHover);
-  color: black;
 
-}
 
-#start-btn {
-  background-color: var(--themeColor2);
-  color: white;
-}
 
-#start-btn:hover {
-  background-color: var(--btnHover);
-  color: black;
 
-}
 
 /* Amina's CSS Code */
 
@@ -113,18 +128,12 @@ button:hover {
 
 
 @media screen and (max-width: 480px) {
-  .mainContainer {
+  .homeContainer {
     display: inline-block;
   }
   
-  /* .genieContainer {
-    margin: 0 auto;
-  } */
-
   .textContainer {
-    /* padding-left: 20%; */
-    /* align-items: center; */
-    margin: 0 auto;
+      margin: 0 auto;
   }
 }
 
@@ -150,7 +159,6 @@ button:hover {
 .pure-g div {
   box-sizing: border-box;
   padding-top: 5px;
-  ;
 }
 
 div.vertical-line {
