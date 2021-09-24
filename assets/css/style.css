@@ -58,6 +58,7 @@ button:hover {
 .textContainer {
   width: 40%;
   padding: 5%;
+  text-align:center;
 }
 
 .bodyIcon,
@@ -122,7 +123,6 @@ button {
   text-align: center;
   border: black;
   border-style: solid 1px;
-  
 }
 
 
@@ -158,20 +158,19 @@ button {
 
 .pure-g div {
   box-sizing: border-box;
-  padding-top: 5px;
 }
 
 div.vertical-line {
-  width: 1px;
+  width: 3px;
   background-color: white;
-  height: 80%;
+  height: 90%;
   float: left;
 }
 
 .pure-u-1-2 {
   height: 65px;
   font-size: x-large;
-  padding: .5em;
+  padding: .6em;
 }
  
 #recentS { 
