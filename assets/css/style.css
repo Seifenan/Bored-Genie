@@ -135,12 +135,17 @@ button:hover {
 
 .pure-g div {
   box-sizing: border-box;
-  padding-top: 5px;
-}
+  }
 
 div.vertical-line {
-  width: 1px;
+  width: 4px;
   background-color: white;
-  height: 80%;
+  height: 50px;
   float: left;
+}
+
+.pure-u-1-2 {
+  height: 65px;
+  font-size: x-large;
+  padding: .5em;
 }

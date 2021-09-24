@@ -1,9 +1,10 @@
-//I will try to pass this through if needed in the query param
-var searchParam = "";
-//https://theaudiodb.com/api/v1/json/1/discography.php?s=coldplay
-//'https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay'
-//use giphy for image
-//https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyBVZVUd-QRbIypXWwCXNxqj3VkHiJKKhqg&part=snippet,contentDetails,statistics,status
+//Declaring search variables here to work with event listener below
+var musicClick = $("#musicClick");
+var mindClick = $("#mindClick");
+var restartClick = $("#restartClick");
+const container1 = $(".container1");
+const container2 = $(".container2");
+
 
 //This function will give us the artist name. 
 function getArtistName() {
@@ -13,22 +14,20 @@ function getArtistName() {
 }
 
 //This will bring a giphy back of the artist
-function displayArtistGiphy(artistSearchParam) {
-  var artistGiphyURL = "https://api.giphy.com/v1/gifs/search?q=" + artistSearchParam + '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1';
-  fetch(artistGiphyURL)
+function displayGiphy(SearchParam) {
+  var GiphyURL = "https://api.giphy.com/v1/gifs/search?q=" + SearchParam + '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1';
+  fetch(GiphyURL)
     .then(function (response) {
       return response.json();
     })
     .then(function (response) {
-      console.log(response.data[0]);
 
-      var artistGiphyContainer = $(".container1");
-      artistGiphyContainer.html("");
+      container1.html("");
 
-      var artistGifEl = document.createElement('img');
-      artistGifEl.setAttribute('src', response.data[0].images.fixed_height.url);
+      var gifEl = document.createElement('img');
+      gifEl.setAttribute('src', response.data[0].images.fixed_height.url);
 
-      artistGiphyContainer.append(artistGifEl);
+      container1.append(gifEl);
     });
 }
 
@@ -42,14 +41,6 @@ function displayArtistData(artistSearchParam) {
       return response.json();
     })
     .then(function (data) {
-      /*
-      console.log(data.artists[0].strArtist);
-      console.log(data.artists[0].strGenre);
-      console.log(data.artists[0].strBiographyEN);
-      console.log(data.artists[0].strWebsite);
-      console.log(data.artists[0].strFacebook);
-      console.log(data.artists[0].strTwitter);*/
-
 
       //Here we get the data back and store it.
       var artistName = data.artists[0].strArtist;
@@ -87,49 +78,141 @@ function displayArtistData(artistSearchParam) {
       container2SubDiv1.append(artistWebsiteEl);
       container2SubDiv1.append(artistFacebookEl);
       container2SubDiv1.append(artistTwitterEl);
+    });
+}
 
+function displayTriviaOptions() {
+
+  container1.html("");
+
+  var container2SubDiv1 = $(".container2SubDiv1");
+  container2SubDiv1.html("");
+
+  container2SubDiv1.append("<select id=selectCategory>"
+    + "<option selected disabled>Select Category</option>"
+    + "<option value=9>General Knowledge</option>"
+    + "<option value=10>Entertainment: Books</option>"
+    + "<option value=11>Entertainment: Film</option>"
+    + "<option value=12>Entertainment: Music</option>"
+    + "<option value=14>Entertainment: Television</option>"
+    + "<option value=15>Entertainment: Video Games</option>"
+    + "<option value=16>Entertainment: Board Games</option>"
+    + "<option value=17>Science &amp; Nature</option>"
+    + "<option value=18>Science: Computers</option>"
+    + "<option value=19>Science: Mathematics</option>"
+    + "<option value=20>Mythology</option>"
+    + "<option value=21>Sports</option>"
+    + "<option value=22>Geography</option>"
+    + "<option value=23>History</option>"
+    + "<option value=24>Politics</option>"
+    + "<option value=25>Art</option>"
+    + "<option value=26>Celebrities</option>"
+    + "<option value=27>Animals</option>"
+    + "<option value=28>Vehicles</option>"
+    + "<option value=29>Entertainment: Comics</option>"
+    + "<option value=30>Science: Gadgets</option>"
+    + "<option value=31>Entertainment: Japanese Anime &amp; Manga</option>"
+    + "<option value=32>Entertainment: Cartoon &amp; Animations</option>"
+    + "</select>");
+
+  var container2SubDiv2 = $(".container2SubDiv2");
+  container2SubDiv2.html("");
+  container2SubDiv2.append("<select id=selectDifficulty>"
+    + "<option selected disabled>Select Difficulty</option>"
+    + "<option value=easy>Easy</option>"
+    + "<option value=medium>Medium</option>"
+    + "<option value=hard>Hard</option>"
+    + "</select>");
+
+  container2.append("<input id='submit' type='button'>Submit</input>");
+
+  //Upon clicking submit we make the API call.
+  var submit = $("#submit");
+  submit.click(function () {
+
+    category = document.getElementById('selectCategory').value;
+    difficulty = document.getElementById('selectDifficulty').value;
+    var triviaURL = "https://opentdb.com/api.php?amount=1&category=" + category + "&difficulty=" + difficulty + "&type=boolean";
+
+    fetch(triviaURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        displayGiphy(category);
+
+        var triviaCategory = data.results[0].category;
+        var triviaDifficulty = data.results[0].difficulty;
+        var triviaQuestion = data.results[0].question;
+        var triviaAnswer = data.results[0].correct_answer;
+
+        container2.html("");
+
+        var triviaCategoryEl = document.createElement("p");
+        var triviaDifficultyEl = document.createElement("p");
+        var triviaQuestionEl = document.createElement("p");
+
+        //Here we are adding data to our DOM elements.
+        triviaCategoryEl.textContent = "Category: " + triviaCategory;
+        triviaDifficultyEl.textContent = "Difficulty: " + triviaDifficulty.toUpperCase();
+        triviaQuestionEl.textContent = "True or False? " + triviaQuestion;
+
+
+        container2.append(triviaCategoryEl);
+        container2.append(triviaDifficultyEl);
+        container2.append(triviaQuestionEl);
+
+
+        container2.append("<span title=" + triviaAnswer + ">Hover your mouse to see answer!</span>")
+
+        /*var toPutIntoLocalStorage = JSON.stringify({
+          trivia: value1,
+          difficulty: value2
+        });
+        var toPullOutOfLocalStorage = JSON.parse(value);
+        toPullOutOfLocalStorage.trivia;
+        toPullOutOfLocalStorage.difficulty;*/
+
+      });
+  })
+}
+
+//This will display a restart click
+function displayRestartGiphy() {
+  var restartGiphyURL = "https://api.giphy.com/v1/gifs/search?q=restart&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1";
+  fetch(restartGiphyURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (response) {
+
+      restartClick.html("");
+
+      var restartClickEl = document.createElement('img');
+      restartClickEl.setAttribute('src', response.data[0].images.fixed_height.url);
+
+      restartClick.append(restartClickEl);
     });
 }
 //On function to call with out event listener that we will be implementing. 
 function displayArtist() {
   var artistSearchParam = getArtistName();
-  displayArtistGiphy(artistSearchParam);
+  displayGiphy(artistSearchParam);
   displayArtistData(artistSearchParam);
 }
 
-displayArtist();
+//This will run the JS for music options.
+musicClick.click(function () {
+  displayArtist();
+  displayRestartGiphy();
+})
 
-/*fetch(
-    'https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay'
-  )
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data);
-    });
-  */
+mindClick.click(function () {
+  displayTriviaOptions();
+  displayRestartGiphy();
+})
 
-
-//Google maps pins
-
-    var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    };
-
-    function success(pos) {
-      var crd = pos.coords;
-
-      console.log('Your current position is:');
-      console.log(`Latitude : ${crd.latitude}`);
-      console.log(`Longitude: ${crd.longitude}`);
-      console.log(`More or less ${crd.accuracy} meters.`);
-    }
-
-    function error(err) {
-      console.warn(`ERROR(${err.code}): ${err.message}`);
-    }
-
-    navigator.geolocation.getCurrentPosition(success, error, options);
+restartClick.click(function () {
+  window.location.reload();
+})
