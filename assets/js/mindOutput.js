@@ -146,14 +146,14 @@ function displayTriviaOptions() {
         var triviaAnswer = data.results[0].correct_answer;
 
         container2.html("");
-        var triviaCategoryEl = document.createElement("p");
-        var triviaDifficultyEl = document.createElement("p");
-        var triviaQuestionEl = document.createElement("p");
+        var triviaCategoryEl = document.createElement("div");
+        var triviaDifficultyEl = document.createElement("div");
+        var triviaQuestionEl = document.createElement("div");
 
         //Here we are adding data to our DOM elements.
-        $(triviaCategoryEl).html("Category: " + triviaCategory + '<br>');
-        $(triviaDifficultyEl).html(" Difficulty: " + triviaDifficulty.toUpperCase()+ '<br>');
-        $(triviaQuestionEl).html("True or False? " + triviaQuestion+ '<br>');
+        $(triviaCategoryEl).html("Category: " + triviaCategory);
+        $(triviaDifficultyEl).html(" Difficulty: " + triviaDifficulty.toUpperCase());
+        $(triviaQuestionEl).html("True or False? " + triviaQuestion);
 
         container2.append(triviaCategoryEl);
         container2.append(triviaDifficultyEl);

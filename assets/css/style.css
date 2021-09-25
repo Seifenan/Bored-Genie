@@ -3,6 +3,15 @@
   --themeColor2: #606060;
   --btnHover: #C4C4C4;
 }
+body {
+  font-family: sans-serif;
+  background-image: url("../images/backgroundImage.jpeg");
+  color: var(--themeColor1);
+}
+
+p {
+  font-size: x-large;
+}
 
 a,
 footer {
@@ -11,8 +20,13 @@ footer {
   text-decoration: none;
 }
 
+footer {
+  position: absolute; 
+  left: 0 ; right: 0; bottom: 0; 
+  height:[footer-height] 
+}
+
 button {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
   padding: 1.5%;
   border: none;
@@ -49,9 +63,9 @@ button:hover {
 .container2 {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--themeColor1);
+  /* background-color: var(--themeColor1); */
   text-align: center;
-  width: 100%;
+  width: 90%;
 }
 
 .genieContainer {
@@ -107,48 +121,13 @@ button:hover {
   padding: 5%;
 }
 
-
-
 .artistBioEl {
-  width: 100%;
+  font-size: large;
+
 }
-
-/* .triviaAnswer
-
-.container2SubDiv2 {
-  float: right;
-} */
-
-
-
-
-/* .container2SubDiv1 {
-  float: left;
-  width: 40%;
-}
-
-.container2SubDiv2 {
-  float: right;
-}
-
-#selectCategory,
-#selectDifficulty {
-  padding: 10%;
-  float: left;
-  width: 100%;
-} */
-
-/* #selectCategory {
-  width: 40;
-}
-#selectDifficulty {
-} */
-
-
-
 
 .container2SubDiv1 {
-  width: 30%;
+  width: 25%;
   float: left;
   /* padding: 5%; */
 }
@@ -160,17 +139,11 @@ button:hover {
 }
 
 .container2SubDiv2 {
-  width: 30%;
-  margin: 0 auto;
+  width: 75%;
 }
-
-
 
 /* #fitnessClick,
 #foodClick,  */
-
-
-
 
 /* .musicClick,
 .mainGenie,
@@ -179,11 +152,6 @@ button:hover {
   text-align: center;
   justify-items: center;
 } */
-
-
-
-
-
 
 /* .bodyIcon,
 .mainGenie,
@@ -200,7 +168,6 @@ button:hover {
 .loadingGenie,
 .loadingGenie2 {
   position: absolute;
-  background-color: var(--themeColor1);
   width: 100%;
   text-align: center;
 }
