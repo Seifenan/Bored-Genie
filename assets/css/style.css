@@ -226,7 +226,8 @@ div.vertical-line {
   float: left;
 }
 
-.pure-u-1-2 {
+.pure-u-1-2,
+.pure-u-1 {
   height: 65px;
   font-size: x-large;
   padding: .6em;
