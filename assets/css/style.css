@@ -21,6 +21,7 @@ button {
   color: black;
 }
 
+a:hover,
 button:hover {
   background-color: var(--btnHover);
   color: black;
@@ -29,6 +30,7 @@ button:hover {
 #startBtn {
   background-color: var(--themeColor2);
   color: white;
+  border-radius: 5px;
 }
 
 #startBtn:hover {
@@ -43,11 +45,13 @@ button:hover {
 .homeContainer,
 .mainContainer,
 .bodyContainer,
-.mindContainer {
+.mindContainer,
+.container2 {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--themeColor1);
-  /* justify-items: center; */
+  text-align: center;
+  width: 100%;
 }
 
 .genieContainer {
@@ -61,23 +65,137 @@ button:hover {
   text-align:center;
 }
 
-.bodyIcon,
+.bodyIcon {
+  width: 25%;
+  float: left;
+  padding: 5%;
+}
+
+.mindIcon {
+  width: 25%;
+  float: right;
+  padding: 5%;
+
+}
+
+.mainGenie {
+  width: 25%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+
+
+#musicClick,
+#fitnessClick {
+  float: left;
+  width: 40%;
+  padding: 5%;
+
+}
+
+#mindClick,
+#foodClick {
+  float: right;
+  width: 40%;
+  padding: 5%;
+}
+
+.downMaintenance,
+.returnedImgEl {
+  margin: 0 auto;
+  padding: 5%;
+}
+
+
+
+.artistBioEl {
+  width: 100%;
+}
+
+/* .triviaAnswer
+
+.container2SubDiv2 {
+  float: right;
+} */
+
+
+
+
+/* .container2SubDiv1 {
+  float: left;
+  width: 40%;
+}
+
+.container2SubDiv2 {
+  float: right;
+}
+
+#selectCategory,
+#selectDifficulty {
+  padding: 10%;
+  float: left;
+  width: 100%;
+} */
+
+/* #selectCategory {
+  width: 40;
+}
+#selectDifficulty {
+} */
+
+
+
+
+.container2SubDiv1 {
+  width: 30%;
+  float: left;
+  /* padding: 5%; */
+}
+
+#submit {
+  width: 30%;
+  float: right;
+  /* padding: 5%; */
+}
+
+.container2SubDiv2 {
+  width: 30%;
+  margin: 0 auto;
+}
+
+
+
+/* #fitnessClick,
+#foodClick,  */
+
+
+
+
+/* .musicClick,
 .mainGenie,
 .mindIcon {
   padding: 5%;
   text-align: center;
-  /* justify-items: center; */
-}
+  justify-items: center;
+} */
 
-.bodyIcon {
-  width: 10%;
-}
-.mainGenie {
-  width: 25%;
-}
+
+
+
+
+
+/* .bodyIcon,
+.mainGenie,
 .mindIcon {
-  width: 15%;
-}
+  width: 20%;
+} */
+
+
+
+
+
+
 
 .loadingGenie,
 .loadingGenie2 {
@@ -87,43 +205,9 @@ button:hover {
   text-align: center;
 }
 
-/* .bodyBtn {
-  padding: 5%;
-  margin: 5%;
-} */
-
-/* .body-icon:hover,
-.main-genie:hover,
-.mind-icon:hover {
-  transition: all .3s ease-in-out;
-} */
-
-
-button {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  padding: 1.5%;
-  border: none;
-  border-radius: 5px;
-  
-  color: black;
- 
-}
 
 
 
-
-
-
-/* Amina's CSS Code */
-
-#nav-bar {
-  max-height: 100%;
-  background-color: #606060;
-  text-align: center;
-  border: black;
-  border-style: solid 1px;
-}
 
 
 
@@ -136,6 +220,14 @@ button {
       margin: 0 auto;
   }
 }
+
+
+
+
+
+
+/* Amina's CSS Code */
+
 
 
 

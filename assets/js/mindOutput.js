@@ -1,7 +1,6 @@
 //Declaring search variables here to work with event listener below
 var musicClick = $("#musicClick");
 var mindClick = $("#mindClick");
-var restartClick = $("#restartClick");
 const container1 = $(".container1");
 const container2 = $(".container2");
 
@@ -25,6 +24,7 @@ function displayGiphy(SearchParam) {
 
       var gifEl = document.createElement('img');
       gifEl.setAttribute('src', response.data[0].images.fixed_height.url);
+      gifEl.setAttribute('class', "returnedImgEl");
 
       container1.append(gifEl);
     });
@@ -56,6 +56,7 @@ function displayArtistData(artistSearchParam) {
       var artistNameEl = document.createElement("p");
       var artistGenreEl = document.createElement("p");
       var artistBioEl = document.createElement("p");
+      artistBioEl.setAttribute('class', 'artistBioEl');
       var artistWebsiteEl = document.createElement("p");
       var artistFacebookEl = document.createElement("p");
       var artistTwitterEl = document.createElement("p");
@@ -121,7 +122,7 @@ function displayTriviaOptions() {
     + "<option value=hard>Hard</option>"
     + "</select>");
   //submit button
-  container2.append("<input id='submit' type='button'>Submit</input>");
+  container2.append("<button id=submit>Submit</button>");
 
   //Upon clicking submit we make the API call.
   var submit = $("#submit");
@@ -150,40 +151,16 @@ function displayTriviaOptions() {
         var triviaQuestionEl = document.createElement("p");
 
         //Here we are adding data to our DOM elements.
-        $(triviaCategoryEl).html("Category: " + triviaCategory);
-        $(triviaDifficultyEl).html("Difficulty: " + triviaDifficulty.toUpperCase());
-        $(triviaQuestionEl).html("True or False? " + triviaQuestion);
+        $(triviaCategoryEl).html("Category: " + triviaCategory + '<br>');
+        $(triviaDifficultyEl).html(" Difficulty: " + triviaDifficulty.toUpperCase()+ '<br>');
+        $(triviaQuestionEl).html("True or False? " + triviaQuestion+ '<br>');
 
         container2.append(triviaCategoryEl);
         container2.append(triviaDifficultyEl);
         container2.append(triviaQuestionEl);
-        container2.append("<span title=" + triviaAnswer + ">Hover your mouse to see answer!</span>")
-
-        /*var toPutIntoLocalStorage = JSON.stringify({
-          trivia: value1,
-          difficulty: value2
-        });
-
-        var toPullOutOfLocalStorage = JSON.parse(value);
-        toPullOutOfLocalStorage.trivia;
-        toPullOutOfLocalStorage.difficulty;*/
+        container2.append("<div class='triviaAnswer'><span title=" + triviaAnswer + ">Hover your mouse to see answer!</span></div>")
       });
   })
-}
-
-//This will display a restart click. This function was made to make the app more fun.
-function displayRestartGiphy() {
-  var restartGiphyURL = "https://api.giphy.com/v1/gifs/search?q=restart&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1";
-  fetch(restartGiphyURL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (response) {
-      restartClick.html("");
-      var restartClickEl = document.createElement('img');
-      restartClickEl.setAttribute('src', response.data[0].images.fixed_height.url);
-      restartClick.append(restartClickEl);
-    });
 }
 
 //This will run on page load.
@@ -196,16 +173,10 @@ function displayArtist() {
 //This will display Artist bio and other data
 musicClick.click(function () {
   displayArtist();
-  displayRestartGiphy();
 })
 
 //This will display Trivia info
 mindClick.click(function () {
   displayTriviaOptions();
-  displayRestartGiphy();
 })
 
-//This will refresh the page upon click.
-restartClick.click(function () {
-  window.location.reload();
-})
