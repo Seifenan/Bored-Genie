@@ -1,25 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/d0b784a2d0.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./assets/images/genie.png" type="image/PNG">
+  <title>Bored Genie</title>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>Recent Searches</li>
-      <li>Surprise Me</li>
-      <li>Keyword Search</li>
-    </ul>
-  </nav>
-  <h3>Do you want to feed the mind or the body?</h3>
-  <div>
-    <div>Mind</div>
-    <div>Body</div>
+
+  <div class="homeContainer">
+    <div class="genieContainer">
+      <img src="./assets/images/helloGenie.gif" class="homeGenie" alt="home-page-genie">
+    </div>
+    <div class="textContainer">
+      <h1 class="appTitle">Wishing Boredom Away</h1>
+      <p>The app that chooses so you don't have to.</p>
+      <br>
+      <P>To Start The Application, Click Proceed.</P>
+      <br>
+      <button class="pure-button" id="startBtn">Proceed</button>
+    </div>
   </div>
-  <footer></footer>
+
+  <div class="mainContainer" id="hide">
+    <div class="bodyIcon">
+      <a href="assets/bodyOutput.html"><button class="bodyBtn"><img src="./assets/images/body 1.png"
+            alt="main-page-body-icon" width="60%">
+          <p>BODY</p>
+        </button></a>
+
+    </div>
+
+    <div class="mainGenie">
+      <p>What’s your Mood?</p>
+      <img src="./assets/images/genie.png" alt="main-page-genie-icon" width="100%">
+    </div>
+
+    <div class="mindIcon">
+      <a href="assets/mindOutput.html"> <button class="mindBtn"><img src="./assets/images/mind 2.png"
+            alt="main-page-mind-icon" width="100%">
+          <p>MIND</p>
+        </button></a>
+    </div>
+  </div>
+
+  <!--Testing Loading Genie-->
+
+  <!-- <div class="loadingGenie" id="hide">
+    <img src="./assets/images/loadingGenie.gif" alt="loading-genie-icon" width="300" height="300">
+  </div>
+
+  <div class="loadingGenie2" id="hide">
+    <img src="./assets/images/loadingGenie2.gif" alt="loading-genie-icon" width="300" height="300">
+  </div> -->
+
+  <footer>
+    <div class="pure-g" id="nav-bar">
+      <div class="pure-u-1-2" id="nav-home">
+        <i class="fas fa-home"></i>
+        <a  href="./index.html">Home</a>
+      </div>
+ 
+      <div class="pure-u-1-2" id="nav-recent">
+        <div class="vertical-line"></div>
+        <i class="fas fa-book"></i>
+        <a href="./assets/journal.html">Bored Diary</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
