@@ -1,5 +1,5 @@
 var journalEntryEl = document.querySelector('#journal');
-var submitButtonEl = document.querySelector('#submit');
+var submitButtonEl = document.querySelector('#ss');
 function lastJournalEntry() {
     var journalEntry = localStorage.getItem('journalLog');
     if (journalEntry === null) {
