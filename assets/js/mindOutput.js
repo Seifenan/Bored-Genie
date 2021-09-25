@@ -81,6 +81,8 @@ function displayArtistData(artistSearchParam) {
 
 //This function will call the API and get Trivia Questions based off what the user selects.
 function displayTriviaOptions() {
+
+  document.getElementById("spaceTaker").style.height = "150px";
   //Cleaning up old values.
   container1.html("");
   var container2SubDiv1 = $(".container2SubDiv1");
@@ -122,7 +124,7 @@ function displayTriviaOptions() {
     + "<option value=hard>Hard</option>"
     + "</select>");
   //submit button
-  container2.append("<button id=submit>Submit</button>");
+  container2.append("<button class='pure-button' id=submit>Submit</button>");
 
   //Upon clicking submit we make the API call.
   var submit = $("#submit");
@@ -146,9 +148,15 @@ function displayTriviaOptions() {
         var triviaAnswer = data.results[0].correct_answer;
 
         container2.html("");
+
+        //container2.setAttribute("class", "struggle");
         var triviaCategoryEl = document.createElement("div");
+        triviaCategoryEl.setAttribute("class", "catEl");
         var triviaDifficultyEl = document.createElement("div");
+        triviaDifficultyEl.setAttribute("class", "diffEl");
         var triviaQuestionEl = document.createElement("div");
+        triviaQuestionEl.setAttribute("class", "qEl");
+
 
         //Here we are adding data to our DOM elements.
         $(triviaCategoryEl).html("Category: " + triviaCategory);
@@ -179,4 +187,3 @@ musicClick.click(function () {
 mindClick.click(function () {
   displayTriviaOptions();
 })
-

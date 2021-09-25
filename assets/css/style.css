@@ -8,24 +8,19 @@ body {
   background-image: url("../images/backgroundImage.jpeg");
   color: var(--themeColor1);
 }
-
 p {
   font-size: x-large;
 }
-
 a,
 footer {
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
-
 footer {
   position: absolute; 
   left: 0 ; right: 0; bottom: 0; 
-  height:[footer-height] 
 }
-
 button {
   font-size: 14px;
   padding: 1.5%;
@@ -34,28 +29,23 @@ button {
   
   color: black;
 }
-
 a:hover,
 button:hover {
   background-color: var(--btnHover);
   color: black;
 }
-
 #startBtn {
   background-color: var(--themeColor2);
   color: white;
   border-radius: 5px;
 }
-
 #startBtn:hover {
   background-color: var(--btnHover);
   color: black;
 }
-
 #hide {
   display: none; 
 }
-
 .homeContainer,
 .mainContainer,
 .bodyContainer,
@@ -67,103 +57,81 @@ button:hover {
   text-align: center;
   width: 90%;
 }
-
+.container2 {
+  margin: 0 auto;
+}
 .genieContainer {
   width: 35%;
   margin-left: 7%;
 }
-
 .textContainer {
   width: 40%;
   padding: 5%;
   text-align:center;
 }
-
 .bodyIcon {
   width: 25%;
   float: left;
   padding: 5%;
 }
-
 .mindIcon {
   width: 25%;
   float: right;
   padding: 5%;
-
 }
-
 .mainGenie {
   width: 25%;
   margin: 0 auto;
   padding-top: 5%;
 }
-
-
-
+.cent {
+  text-align: center;
+}
 #musicClick,
 #fitnessClick {
   float: left;
   width: 40%;
   padding: 5%;
-
 }
-
 #mindClick,
 #foodClick {
   float: right;
   width: 40%;
   padding: 5%;
 }
-
+.catEl,
+.diffEl,
+.qEl {
+  display: block !important;
+}
 .downMaintenance,
 .returnedImgEl {
   margin: 0 auto;
   padding: 5%;
 }
-
 .artistBioEl {
   font-size: large;
-
+  display: block;
+  width: 80%;
+  padding-left: 5%;
+  height: 90%;
+  text-overflow: ellipsis;
+  max-width: 80ch;
+  padding-bottom: 10%;
 }
-
 .container2SubDiv1 {
   width: 25%;
   float: left;
   /* padding: 5%; */
 }
-
 #submit {
   width: 30%;
   float: right;
   /* padding: 5%; */
 }
-
 .container2SubDiv2 {
   width: 75%;
 }
-
-/* #fitnessClick,
-#foodClick,  */
-
-/* .musicClick,
-.mainGenie,
-.mindIcon {
-  padding: 5%;
-  text-align: center;
-  justify-items: center;
-} */
-
-/* .bodyIcon,
-.mainGenie,
-.mindIcon {
-  width: 20%;
-} */
-
-
-
-
-
-
 
 .loadingGenie,
 .loadingGenie2 {
@@ -171,13 +139,6 @@ button:hover {
   width: 100%;
   text-align: center;
 }
-
-
-
-
-
-
-
 @media screen and (max-width: 480px) {
   .homeContainer {
     display: inline-block;
@@ -187,25 +148,7 @@ button:hover {
       margin: 0 auto;
   }
 }
-
-
-
-
-
-
 /* Amina's CSS Code */
-
-
-
-
-
-
-
-
-
-
-/* Amina's CSS Code */
-
 #nav-bar {
   max-height: 100%;
   background-color: #606060;
@@ -214,18 +157,15 @@ button:hover {
   border-style: solid 1px;
   
 }
-
 .pure-g div {
   box-sizing: border-box;
 }
-
 div.vertical-line {
   width: 3px;
   background-color: white;
   height: 90%;
   float: left;
 }
-
 .pure-u-1-2,
 .pure-u-1 {
   height: 65px;
@@ -244,4 +184,3 @@ div.vertical-line {
 .pure-button-nav {
   text-align: center;
 }
-
