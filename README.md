@@ -33,5 +33,5 @@ As a USER, I WANT an application that allows me to easily click through SO THAT 
 
 ## Contribution 
 
-Made with ❤️ by Nasif Ahmed, Seif Enan, Amina Kurdi
+Made with ❤️ by Nasir Ahmed, Seif Enan, Amina Kurdi
 
