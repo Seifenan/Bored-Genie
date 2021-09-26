@@ -1,5 +1,7 @@
 # Wish Boredom Away
 
+[Wish Boredom Away](https://seifenan.github.io/Project-1-Bored-Genie/) 
+
 ## Description
 
 This is a wellness appication that allows the user to randomly select an activity to stimulate either the mind or the body.
