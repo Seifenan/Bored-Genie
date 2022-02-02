@@ -23,12 +23,9 @@ var bodyContainer = document.querySelector(".bodyContainer");
 
 var mindContainer = document.querySelector(".mindContainer");
 
-
-
 bodyIcon.addEventListener("click", loadBody);
 
 mindIcon.addEventListener("click", loadMind);
-
 
 function loadBody() {
   loadGenie();
@@ -50,7 +47,6 @@ function loadMind() {
 var loadingGenie = document.querySelector(".loadingGenie");
 
 var loadingGenie2 = document.querySelector(".loadingGenie2");
-
 
 function loadGenie() {
   loadingGenie.setAttribute("id", "show");

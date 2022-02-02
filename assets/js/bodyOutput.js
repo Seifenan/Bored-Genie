@@ -28,4 +28,3 @@ fitnessClick.click(function () {
   downForMaintenence.setAttribute('height', "300");
   container1.append(downForMaintenence);
 })
-

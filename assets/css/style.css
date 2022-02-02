@@ -1,8 +1,9 @@
 :root {
-  --themeColor1: #F6F6F6;
+  --themeColor1: #f6f6f6;
   --themeColor2: #606060;
-  --btnHover: #C4C4C4;
+  --btnHover: #c4c4c4;
 }
+
 body {
   font-family: sans-serif;
   background-image: url("../images/backgroundImage.jpeg");
@@ -21,8 +22,10 @@ footer {
 }
 
 footer {
-  position: absolute; 
-  left: 0 ; right: 0; bottom: 0; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 button {
@@ -30,7 +33,6 @@ button {
   padding: 1.5%;
   border: none;
   border-radius: 5px;
-  
   color: black;
 }
 
@@ -52,7 +54,7 @@ button:hover {
 }
 
 #hide {
-  display: none; 
+  display: none;
 }
 
 .homeContainer,
@@ -79,7 +81,7 @@ button:hover {
 .textContainer {
   width: 40%;
   padding: 5%;
-  text-align:center;
+  text-align: center;
 }
 
 .bodyIcon {
@@ -92,7 +94,6 @@ button:hover {
   width: 25%;
   float: right;
   padding: 5%;
-
 }
 
 .mainGenie {
@@ -110,7 +111,6 @@ button:hover {
   float: left;
   width: 40%;
   padding: 5%;
-
 }
 
 #mindClick,
@@ -176,12 +176,6 @@ button:hover {
   width: 20%;
 } */
 
-
-
-
-
-
-
 .loadingGenie,
 .loadingGenie2 {
   position: absolute;
@@ -189,39 +183,15 @@ button:hover {
   text-align: center;
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 480px) {
   .homeContainer {
     display: inline-block;
   }
-  
+
   .textContainer {
-      margin: 0 auto;
+    margin: 0 auto;
   }
 }
-
-
-
-
-
-
-/* Amina's CSS Code */
-
-
-
-
-
-
-
-
-
-
-/* Amina's CSS Code */
 
 #nav-bar {
   max-height: 100%;
@@ -229,7 +199,6 @@ button:hover {
   text-align: center;
   border: black;
   border-style: solid 1px;
-  
 }
 
 .pure-g div {
@@ -247,18 +216,16 @@ div.vertical-line {
 .pure-u-1 {
   height: 65px;
   font-size: x-large;
-  padding: .6em;
+  padding: 0.6em;
 }
- 
-#recentS { 
+
+#recentS {
   text-align: center;
-  background-color:#C4C4C4;
-  
+  background-color: #c4c4c4;
 }
- 
+
 .recentHeader,
 .recentP,
 .pure-button-nav {
   text-align: center;
 }
-

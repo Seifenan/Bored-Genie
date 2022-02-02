@@ -1,23 +1,19 @@
 # Wish Boredom Away
 
-[Wish Boredom Away](https://seifenan.github.io/Project-1-Bored-Genie/) 
-
 ## Description
-
 This is a wellness appication that allows the user to randomly select an activity to stimulate either the mind or the body.
 
-### Motivation
+[Wish Boredom Away](https://seifenan.github.io/Bored-Genie/) 
 
+### Motivation
  We all experience boredom. We all also experience the struggles of deciding what we want to do during those times. Often times when someone asks us what we want to do, 99% of us draw a blank. The purpose of this application is to provide the user with a service that chooses an activity for them.
 
  We also included a fun feature to allow the User to document, and journal down their favorite ideas or thoughts they may be having. It allows the User to save the entry so that the next time they open the page, they can see what they wrote them before.
 
 ## User Story
-
 As a USER, I WANT an application that allows me to easily click through SO THAT I am presented with a randomized activity. 
 
 ## Built With
-
  1. HTML
  2. CSS
  3. JavaScript
@@ -28,9 +24,7 @@ As a USER, I WANT an application that allows me to easily click through SO THAT 
  8. AudioDB API
  9. OpenTDB API
  
-
 ## Screenshots
-
 ![Home Page](/assets/images/page1.PNG)
 ![Mind or Body](/assets/images/page2.PNG)
 ![Body Choice](/assets/images/page3.PNG)
@@ -41,12 +35,5 @@ As a USER, I WANT an application that allows me to easily click through SO THAT 
 ![Trivia Output](/assets/images/page9.PNG)
 ![Journal](/assets/images/page6.PNG)
 
-
-
-
-
-
 ## Contribution 
-
 Made with ❤️ by Nasir Ahmed, Seif Enan, Amina Kurdi
-
